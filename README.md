@@ -52,7 +52,7 @@ Use Git for cloning the code to your local or below line for Ubuntu:
 
 A directory called util will be created. Or you can use below link for exploring the code:
 
-	git clone https://github.com/starlangsoftware/dictionary-js.git
+	git clone https://github.com/starlangsoftware/ngram-js.git
 
 ## Open project with Webstorm IDE
 
