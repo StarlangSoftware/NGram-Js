@@ -1,0 +1,29 @@
+{
+  "name": "nlptoolkit-ngram",
+  "version": "1.0.0",
+  "description": "NGram library",
+  "main": "index.js",
+  "scripts": {
+    "test": "Mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StarlangSoftware/NGram-Js.git"
+  },
+  "author": "Olcay Taner Yıldız",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StarlangSoftware/NGram-Js/issues"
+  },
+  "homepage": "https://github.com/StarlangSoftware/NGram-Js#readme",
+  "devDependencies": {
+    "@types/mocha": "^9.0.0",
+    "mocha": "^9.1.3",
+    "nlptoolkit-datastructure": "^1.0.0",
+    "nlptoolkit-math": "^1.0.0",
+    "nlptoolkit-sampling": "^1.0.0",
+    "nlptoolkit-util": "^1.0.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  }
+}
