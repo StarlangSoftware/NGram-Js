@@ -1,8 +1,7 @@
 export declare class MultipleFile {
     private fileIndex;
-    private lineIndex;
-    private fileNameList;
-    private lines;
+    private readonly fileNameList;
+    private contents;
     constructor(...args: Array<any>);
     readLine(): string;
     hasNextLine(): boolean;

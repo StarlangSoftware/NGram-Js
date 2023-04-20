@@ -1,33 +1,27 @@
-import * as fs from "fs";
+import {FileContents} from "nlptoolkit-util/dist/FileContents";
 
 export class MultipleFile {
 
     private fileIndex: number
-    private lineIndex: number
-    private fileNameList: Array<string>
-    private lines: Array<string>
+    private readonly fileNameList: Array<string>
+    private contents: FileContents
 
     constructor(... args: Array<any>) {
         this.fileIndex = 0
         this.fileNameList = args
-        let data = fs.readFileSync(args[this.fileIndex], 'utf8')
-        this.lines = data.split("\n")
-        this.lineIndex = 0
+        this.contents = new FileContents(args[this.fileIndex])
     }
 
     readLine(): string{
-        if (this.lineIndex == this.lines.length){
+        if (!this.contents.hasNextLine()){
             this.fileIndex++
-            let data = fs.readFileSync(this.fileNameList[this.fileIndex], 'utf8')
-            this.lines = data.split("\n")
-            this.lineIndex = 0
+            this.contents = new FileContents(this.fileNameList[this.fileIndex])
         }
-        this.lineIndex++
-        return this.lines[this.lineIndex - 1]
+        return this.contents.readLine()
     }
 
     hasNextLine(): boolean {
-        return this.fileIndex != this.fileNameList.length - 1 || this.lineIndex != this.lines.length - 1
+        return this.fileIndex != this.fileNameList.length - 1 || this.contents.hasNextLine()
     }
 
     readCorpus(): Array<Array<string>>{

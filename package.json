@@ -1,6 +1,6 @@
 {
   "name": "nlptoolkit-ngram",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "NGram library",
   "main": "index.js",
   "types": "index.js",
@@ -27,6 +27,6 @@
     "nlptoolkit-datastructure": "^1.0.4",
     "nlptoolkit-math": "^1.0.2",
     "nlptoolkit-sampling": "^1.0.2",
-    "nlptoolkit-util": "^1.0.5"
+    "nlptoolkit-util": "^1.0.9"
   }
 }
