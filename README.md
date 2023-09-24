@@ -24,7 +24,7 @@ For Developers
 ============
 
 You can also see [Python](https://github.com/starlangsoftware/NGram-Py), [Java](https://github.com/starlangsoftware/NGram), 
-[C++](https://github.com/starlangsoftware/NGram-CPP), [Swift](https://github.com/starlangsoftware/NGram-Swift), 
+[C++](https://github.com/starlangsoftware/NGram-CPP), [C](https://github.com/starlangsoftware/NGram-C), [Swift](https://github.com/starlangsoftware/NGram-Swift), 
 [Cython](https://github.com/starlangsoftware/NGram-Cy) or [C#](https://github.com/starlangsoftware/NGram-CS) repository.
 
 ## Requirements
