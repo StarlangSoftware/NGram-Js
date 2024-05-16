@@ -44,6 +44,10 @@ export class NGramNode<Symbol> {
         }
     }
 
+    /**
+     * Merges this NGramNode with the corresponding NGramNode in another NGram.
+     * @param toBeMerged Parallel NGramNode of the parallel NGram tree.
+     */
     merge(toBeMerged: NGramNode<Symbol>){
         if (this.children != undefined){
             for (let symbol of this.children.keys()){
@@ -382,6 +386,12 @@ export class NGramNode<Symbol> {
         return undefined;
     }
 
+    /**
+     * Prunes the NGramNode according to the given threshold. Removes the child(ren) whose probability is less than the
+     * threshold.
+     * @param threshold Threshold for pruning the NGram tree.
+     * @param N N in N-Gram.
+     */
     prune(threshold: number, N: number){
         if (N == 0){
             let maxElement = undefined;

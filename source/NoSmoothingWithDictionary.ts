@@ -3,7 +3,7 @@ import {NGram} from "./NGram";
 
 export class NoSmoothingWithDictionary<Symbol> extends NoSmoothing<Symbol>{
 
-    private dictionary: Set<Symbol>
+    private readonly dictionary: Set<Symbol>
 
     /**
      * Constructor of {@link NoSmoothingWithDictionary}

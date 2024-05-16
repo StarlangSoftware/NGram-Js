@@ -12,6 +12,10 @@
     exports.LaplaceSmoothing = void 0;
     const SimpleSmoothing_1 = require("./SimpleSmoothing");
     class LaplaceSmoothing extends SimpleSmoothing_1.SimpleSmoothing {
+        /**
+         * Constructor for Laplace smoothing. Sets the delta.
+         * @param delta Delta value in Laplace smoothing.
+         */
         constructor(delta = 1.0) {
             super();
             this.delta = delta;

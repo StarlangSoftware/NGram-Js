@@ -1,1 +1,1 @@
-{"version":3,"file":"SimpleSmoothing.js","sourceRoot":"","sources":["../source/SimpleSmoothing.ts"],"names":[],"mappings":";;;;;;;;;;;;IAEA,MAAsB,eAAe;QAG1B,gBAAgB,CAAC,KAAoB;YACxC,IAAI,CAAC,yBAAyB,CAAC,KAAK,EAAE,KAAK,CAAC,IAAI,EAAE,CAAC,CAAC;QACxD,CAAC;KACJ;IAND,0CAMC"}
+{"version":3,"file":"SimpleSmoothing.js","sourceRoot":"","sources":["../source/SimpleSmoothing.ts"],"names":[],"mappings":";;;;;;;;;;;;IAEA,MAAsB,eAAe;QAGjC;;;WAGG;QACI,gBAAgB,CAAC,KAAoB;YACxC,IAAI,CAAC,yBAAyB,CAAC,KAAK,EAAE,KAAK,CAAC,IAAI,EAAE,CAAC,CAAC;QACxD,CAAC;KACJ;IAVD,0CAUC"}

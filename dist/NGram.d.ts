@@ -17,7 +17,16 @@ export declare class NGram<Symbol> {
      * @param args List of the files where NGram is saved.
      */
     constructor(...args: Array<any>);
+    /**
+     * Reads the header from the input file.
+     * @param multipleFile Input file
+     */
     readHeader(multipleFile: MultipleFile): void;
+    /**
+     * Merges current NGram with the given NGram. If N of the two NGram's are not same, it does not
+     * merge. Merges first the vocabulary, then the NGram trees.
+     * @param toBeMerged NGram to be merged with.
+     */
     merge(toBeMerged: NGram<Symbol>): void;
     /**
      *
@@ -188,5 +197,10 @@ export declare class NGram<Symbol> {
      * @param pZero probability of zero.
      */
     setAdjustedProbability(countsOfCounts: Array<number>, height: number, pZero: number): void;
+    /**
+     * Prunes NGram according to the given threshold. All nodes having a probability less than the threshold will be
+     * pruned.
+     * @param threshold Probability threshold used for pruning.
+     */
     prune(threshold: number): void;
 }

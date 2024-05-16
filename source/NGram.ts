@@ -37,6 +37,10 @@ export class NGram<Symbol> {
         }
     }
 
+    /**
+     * Reads the header from the input file.
+     * @param multipleFile Input file
+     */
     readHeader(multipleFile: MultipleFile){
         let line = multipleFile.readLine();
         let items = line.split(" ");
@@ -56,6 +60,11 @@ export class NGram<Symbol> {
         }
     }
 
+    /**
+     * Merges current NGram with the given NGram. If N of the two NGram's are not same, it does not
+     * merge. Merges first the vocabulary, then the NGram trees.
+     * @param toBeMerged NGram to be merged with.
+     */
     merge(toBeMerged: NGram<Symbol>){
         if (this.N != toBeMerged.getN()){
             return;
@@ -430,6 +439,11 @@ export class NGram<Symbol> {
         this.probabilityOfUnseen[height - 1] = 1.0 / (this.vocabularySize() + 1);
     }
 
+    /**
+     * Prunes NGram according to the given threshold. All nodes having a probability less than the threshold will be
+     * pruned.
+     * @param threshold Probability threshold used for pruning.
+     */
     prune(threshold: number){
         if (threshold > 0.0 && threshold <= 1.0){
             this.rootNode.prune(threshold, this.N - 1);

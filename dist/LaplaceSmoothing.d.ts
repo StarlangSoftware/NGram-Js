@@ -2,6 +2,10 @@ import { SimpleSmoothing } from "./SimpleSmoothing";
 import { NGram } from "./NGram";
 export declare class LaplaceSmoothing<Symbol> extends SimpleSmoothing<Symbol> {
     private readonly delta;
+    /**
+     * Constructor for Laplace smoothing. Sets the delta.
+     * @param delta Delta value in Laplace smoothing.
+     */
     constructor(delta?: number);
     /**
      * Wrapper function to set the N-gram probabilities with laplace smoothing.

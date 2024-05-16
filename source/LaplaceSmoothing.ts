@@ -5,6 +5,10 @@ export class LaplaceSmoothing<Symbol> extends SimpleSmoothing<Symbol>{
 
     private readonly delta: number
 
+    /**
+     * Constructor for Laplace smoothing. Sets the delta.
+     * @param delta Delta value in Laplace smoothing.
+     */
     constructor(delta: number = 1.0) {
         super();
         this.delta = delta

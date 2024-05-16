@@ -14,6 +14,10 @@ export declare class NGramNode<Symbol> {
      * @param multipleFile Multiple file structure to read the nGram.
      */
     constructor(symbol: any, multipleFile?: MultipleFile);
+    /**
+     * Merges this NGramNode with the corresponding NGramNode in another NGram.
+     * @param toBeMerged Parallel NGramNode of the parallel NGram tree.
+     */
     merge(toBeMerged: NGramNode<Symbol>): void;
     /**
      * Gets count of this node.
@@ -134,5 +138,11 @@ export declare class NGramNode<Symbol> {
      * @return generated string.
      */
     generateNextString(s: Array<Symbol>, index: number): Symbol;
+    /**
+     * Prunes the NGramNode according to the given threshold. Removes the child(ren) whose probability is less than the
+     * threshold.
+     * @param threshold Threshold for pruning the NGram tree.
+     * @param N N in N-Gram.
+     */
     prune(threshold: number, N: number): void;
 }

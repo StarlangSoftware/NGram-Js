@@ -11,6 +11,10 @@
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.SimpleSmoothing = void 0;
     class SimpleSmoothing {
+        /**
+         * Calculates the N-Gram probabilities with simple smoothing.
+         * @param nGram N-Gram for which simple smoothing calculation is done.
+         */
         setProbabilities(nGram) {
             this.setProbabilitiesWithLevel(nGram, nGram.getN());
         }

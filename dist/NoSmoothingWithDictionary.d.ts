@@ -1,7 +1,7 @@
 import { NoSmoothing } from "./NoSmoothing";
 import { NGram } from "./NGram";
 export declare class NoSmoothingWithDictionary<Symbol> extends NoSmoothing<Symbol> {
-    private dictionary;
+    private readonly dictionary;
     /**
      * Constructor of {@link NoSmoothingWithDictionary}
      * @param dictionary Dictionary to use in smoothing

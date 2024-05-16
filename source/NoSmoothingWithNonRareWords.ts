@@ -4,7 +4,7 @@ import {NGram} from "./NGram";
 export class NoSmoothingWithNonRareWords<Symbol> extends NoSmoothing<Symbol>{
 
     private dictionary: Set<Symbol>
-    private probability: number
+    private readonly probability: number
 
     /**
      * Constructor of {@link NoSmoothingWithNonRareWords}
