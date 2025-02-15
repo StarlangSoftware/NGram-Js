@@ -11,6 +11,33 @@ export class NGramNode<Symbol> {
     private probabilityOfUnseen: number
     private unknown: NGramNode<Symbol> = undefined
 
+    constructor1(symbol: any){
+        this.symbol = symbol
+        this.count = 0
+    }
+
+    constructor2(symbol: any, multipleFile: MultipleFile) {
+        if (!symbol) {
+            this.symbol = <Symbol><unknown>multipleFile.readLine().trim()
+        }
+        let line = multipleFile.readLine().trim();
+        let items = line.split(" ");
+        if (items.length != 4){
+            Console.log("Error in line -> " + line);
+        }
+        this.count = Number(items[0])
+        this.probability = Number(items[1]);
+        this.probabilityOfUnseen = Number(items[2]);
+        let numberOfChildren = Number(items[3]);
+        if (numberOfChildren > 0){
+            this.children = new Map<Symbol, NGramNode<Symbol>>()
+            for (let i = 0; i < numberOfChildren; i++){
+                let childNode = new NGramNode<Symbol>(false, multipleFile);
+                this.children.set(childNode.symbol, childNode);
+            }
+        }
+    }
+
     /**
      * Constructor of {@link NGramNode}
      *
@@ -19,28 +46,9 @@ export class NGramNode<Symbol> {
      */
     constructor(symbol: any, multipleFile: MultipleFile = undefined) {
         if (multipleFile == undefined){
-            this.symbol = symbol
-            this.count = 0
+            this.constructor1(symbol);
         } else {
-            if (!symbol) {
-                this.symbol = <Symbol><unknown>multipleFile.readLine().trim()
-            }
-            let line = multipleFile.readLine().trim();
-            let items = line.split(" ");
-            if (items.length != 4){
-                Console.log("Error in line -> " + line);
-            }
-            this.count = Number(items[0])
-            this.probability = Number(items[1]);
-            this.probabilityOfUnseen = Number(items[2]);
-            let numberOfChildren = Number(items[3]);
-            if (numberOfChildren > 0){
-                this.children = new Map<Symbol, NGramNode<Symbol>>()
-                for (let i = 0; i < numberOfChildren; i++){
-                    let childNode = new NGramNode<Symbol>(false, multipleFile);
-                    this.children.set(childNode.symbol, childNode);
-                }
-            }
+            this.constructor2(symbol, multipleFile);
         }
     }
 

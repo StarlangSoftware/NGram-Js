@@ -7,6 +7,8 @@ export declare class NGramNode<Symbol> {
     private probability;
     private probabilityOfUnseen;
     private unknown;
+    constructor1(symbol: any): void;
+    constructor2(symbol: any, multipleFile: MultipleFile): void;
     /**
      * Constructor of {@link NGramNode}
      *
