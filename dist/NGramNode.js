@@ -12,22 +12,6 @@
     exports.NGramNode = void 0;
     const Console = require("console");
     class NGramNode {
-        /**
-         * Constructor of {@link NGramNode}
-         *
-         * @param symbol symbol to be kept in this node.
-         * @param multipleFile Multiple file structure to read the nGram.
-         */
-        constructor(symbol, multipleFile = undefined) {
-            this.children = undefined;
-            this.unknown = undefined;
-            if (multipleFile == undefined) {
-                this.constructor1(symbol);
-            }
-            else {
-                this.constructor2(symbol, multipleFile);
-            }
-        }
         constructor1(symbol) {
             this.symbol = symbol;
             this.count = 0;
@@ -51,6 +35,22 @@
                     let childNode = new NGramNode(false, multipleFile);
                     this.children.set(childNode.symbol, childNode);
                 }
+            }
+        }
+        /**
+         * Constructor of {@link NGramNode}
+         *
+         * @param symbol symbol to be kept in this node.
+         * @param multipleFile Multiple file structure to read the nGram.
+         */
+        constructor(symbol, multipleFile = undefined) {
+            this.children = undefined;
+            this.unknown = undefined;
+            if (multipleFile == undefined) {
+                this.constructor1(symbol);
+            }
+            else {
+                this.constructor2(symbol, multipleFile);
             }
         }
         /**

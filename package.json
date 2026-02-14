@@ -1,9 +1,9 @@
 {
   "name": "nlptoolkit-ngram",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "NGram library",
-  "main": "index.js",
-  "types": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "Mocha"
   },
@@ -24,9 +24,9 @@
     "typescript": "^4.4.4"
   },
   "dependencies": {
-    "nlptoolkit-datastructure": "^1.0.4",
-    "nlptoolkit-math": "^1.0.2",
-    "nlptoolkit-sampling": "^1.0.2",
-    "nlptoolkit-util": "^1.0.9"
+    "nlptoolkit-datastructure": "^1.0.8",
+    "nlptoolkit-math": "^1.0.5",
+    "nlptoolkit-sampling": "^1.0.4",
+    "nlptoolkit-util": "^1.0.11"
   }
 }
